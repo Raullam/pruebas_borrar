@@ -23,16 +23,13 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final temaProvider = Provider.of<ThemeProvider>(context);
+
     return MaterialApp(
-      title: 'Material App',
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Material App Bar'),
-        ),
-        body: const Center(
-          child: Text('Hello World'),
-        ),
-      ),
+      debugShowCheckedModeBanner: false,
+      title: 'Examen prueba',
+      theme: temaProvider.temaActual,
+      home: PaginaLogin(),
     );
   }
 }
